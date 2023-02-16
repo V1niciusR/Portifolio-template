@@ -92,7 +92,11 @@ html {
 /*=====  HOME DO INÍCIO  =====*/
 .home {
   display: flex;
+<<<<<<< HEAD
   background: url(../img/Icons/logo-fab.png) no-repeat;
+=======
+  background: url(../img/Minimalistic\ Mountains\ Black\ and\ White\ Version\ [2560x1440].png) no-repeat;
+>>>>>>> 8ab1b9a9974c8d9494d97206214630f3836a33a1
   background-size: cover;
   height: 100vh;
   color: var(--c-light);
