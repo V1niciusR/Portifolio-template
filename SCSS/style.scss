@@ -160,6 +160,7 @@ html {
 
 
 /*=====  MENU MOBILE  =====*/
+
 .menu-btn {
   color: var(--c-light);
   font-size: 26px;
@@ -325,7 +326,7 @@ section .title::after {
 .services .title::after,
 .teams .title::after {
   background: var(--c-dark);
-  content: "Que oferecemos";
+  content: "Que usamos";
 }
 
 .services .serv-content .card {
