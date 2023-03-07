@@ -1,19 +1,30 @@
 /* Font */
-@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
 
 
 
 /*=====  GERAL  =====*/
 
-* {
-  margin: 0;
+*{
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
-  text-decoration: none;
+  text-decoration: none !important;
+  border: none;
+  list-style: none;
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+body{
+  font-family: 'Open Sans', sans-serif;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
+  background: var(--c-dark);
+  color: var(--textColor);
 }
 
 .max-width {
@@ -33,41 +44,65 @@ html {
   --c-dark: #111;
   --c-dark2: #222;
   --c-dark3: #333;
+  --gray: rgba(42, 53, 62, 0.4);
+  --textColor: #F2FAFF;
   --c-light: #fff;
   --c-light2: #ccc;
-  --c-footer: rgb(53, 143, 53);
+
+  --sidebar-hsl: 210, 44%, 15%;
+  
+  --transition: all .4s cubic-bezier(.165, .84, .44, 1);
+  --border-radius-lg: 2.4rem;
+  --border-radius: 1.2rem;
+  --shadow: 0px 15px 40px rgba(0, 0, 0, 0.1);
 }
 
 /*===========  /VARIABLES COLORS  ===========*/
 
 
 
+/*===== Sub title da sessão =====*/
+
+section {
+  padding: 5rem 0;
+}
+
+.section-title {
+  padding-bottom: 4rem;
+  position: relative;
+}
+
+.sub-title {
+  color: var(--c-brand);
+  font-size: 11px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+/*===== Sub title da sessão =====*/
+
+
+
 /*=====   NAVBAR DE INÍCIO  =====*/
 
 .navbar {
-  position: fixed;
-  width: 100%;
-  padding: 30px 0;
-  font-family: "Ubuntu", sans-serif;
-  z-index: 999;
-  transition: all 0.3s ease;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: var(--c-dark2);
+  transition: var(--transition);
 }
 
-.navbar.sticky {
-  background: var(--c-brand);
-  padding: 15px 0;
-}
-
-.navbar .max-width {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.navbar .logo a {
-  color: var(--c-light);
-  font-size: 35px;
-  font-weight: 500;
+.navbar.scrolled {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background-color: var(--c-dark2);
+  box-shadow: var(--shadow);
 }
 
 .navbar .logo a span {
@@ -75,99 +110,100 @@ html {
   transition: all 0.3s ease;
 }
 
-.navbar.sticky .logo a span {
-  color: var(--c-light);
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-nav .nav-link {
+      padding-right: 16px;
+      padding-left: 16px;
+  }
 }
 
-.navbar .menu li {
-  list-style: none;
-  display: inline-block;
+.navbar .navbar-nav .nav-link {
+  font-weight: 700;
+  color: var(--textColor);
 }
 
-.navbar .menu li a {
-  color: var(--c-light);
-  font-size: 18px;
-  font-weight: 500;
-  margin-left: 25px;
-  transition: color 0.3s ease;
-}
-
-.navbar .menu li a:hover {
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active  {
   color: var(--c-brand);
 }
 
-.navbar.sticky .menu li a:hover {
-  color: var(--c-light);
+.navbar .logo a {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--textColor);
+}
+
+.social-icon  {
+  width: 36px;
+  height: 36px;
+  background-color: var(--c-brand);
+  color: var(--textColor);
+  border: 2px solid var(--c-brand);
+  border-radius: 25px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 6px;
+}
+
+.social-icon:hover {
+  color: var(--c-brand);
+  background-color: transparent;
 }
 
 /*===========  /NAVBAR DE INÍCIO  ===========*/
 
 
 
-/*=====  HOME DO INÍCIO  =====*/
+/*===========  MENU MOBILE  ===========*/
 
-.home {
-  display: flex;
-  background: url(../img/Icons/logo-fab.png) no-repeat;
-  background-size: cover;
-  height: 100vh;
+.menu-btn {
   color: var(--c-light);
-  min-height: 500px;
-  font-family: "Ubuntu", sans-serif;
+  font-size: 36px;
+  cursor: pointer;
+  display: none;
 }
 
-.home .max-width {
-  margin: auto 0 auto 40px;
+/*===========  /MENU MOBILE  ===========*/
+
+
+
+/*===== HOME DE INÍCIO =====*/
+
+#hero {
+  background: /*linear-gradient(hsla(var(--sidebar-hsl), 0.9), hsla(var(--sidebar-hsl), 0.9)),*/ url(../src/assets/img/background/img_3.jpg);
+  background-position: center;
+  background-size: cover;
 }
 
-.home .home-content .text-1 {
-  font-size: 27px;
-}
-
-.home .home-content .text-2 {
-  font-size: 55px;
-  font-weight: 500;
-  margin-left: -3px;
-}
-
-.home .home-content .text-3 {
-  font-size: 30px;
-  margin: 5px 0;
-}
-
-.home .home-content .text-3 span {
+#hero span {
   color: var(--c-brand);
-  font-weight: 500;
+  transition: all 0.3s ease;
 }
 
-.home .home-content a {
-  display: inline-block;
+#hero a{
+  display: inline-flex;
   background: var(--c-brand);
   color: var(--c-light);
   font-size: 15px;
   padding: 6px 16px;
   margin-top: 20px;
-  border-radius: 6px;
+  border-radius: 25px;
   border: 2px solid var(--c-brand);
+  align-items: center;
+  margin-right: 6px;
 }
 
-.home .home-content a:hover {
+#hero a:hover {
   color: var(--c-brand);
   background: none;
 }
 
-/*===========  /HOME DO INÍCIO  ===========*/
+/*===== /HOME DE INÍCIO =====*/
 
 
 
-/*=====  MENU MOBILE  =====*/
-
-.menu-btn {
-  color: var(--c-light);
-  font-size: 26px;
-  cursor: pointer;
-  display: none;
-}
+/*=====  BOTÃO DE VOLTAR AO TOPO  =====*/
 
 .scroll-up-btn {
   position: fixed;
@@ -194,7 +230,7 @@ html {
   pointer-events: auto;
 }
 
-/*===========  /MENU MOBILE  ===========*/
+/*=========== /BOTÃO DE VOLTAR AO TOPO  ===========*/
 
 
 
@@ -205,7 +241,7 @@ section {
 }
 
 section .title {
-  font-family: "Ubuntu", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   text-align: center;
   font-size: 40px;
   font-weight: 500;
@@ -237,7 +273,7 @@ section .title::after {
 }
 
 .about, .services, .skills, .teams, .contact, footer {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .about .about-content,
@@ -255,10 +291,6 @@ section .title::after {
 
 
 /*=====  SESSÃO SOBRE  =====*/
-
-.about .title::after {
-  content: "Informações";
-}
 
 .about .about-content .left {
   width: 45%;
@@ -308,74 +340,91 @@ section .title::after {
   border-radius: 6px;
 }
 
+.exp {
+  background-color: var(--c-dark2);
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+  box-shadow: 0px 30px 45px rgba(22, 22, 22, 0.15);
+}
+
+.exp-number {
+  margin-top: 20px;
+  margin-bottom: -3px;
+}
+
 /*===========  /SESSÃO SOBRE  ===========*/
 
 
 
 /*=====  SESSÃO CONHECIMENTOS  =====*/
 
-.services, .teams {
-  background: var(--c-dark);
-  color: var(--c-light);
+.grid{
+  display: grid;
+  gap: 2.4rem;
 }
 
-.services .title::before,
-.teams .title::before {
-  background: var(--c-light);
+.three-col-grid {
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
-.services .title::after,
-.teams .title::after {
-  background: var(--c-dark);
-  content: "Que usamos";
+@media screen and (max-width:760px) {
+  .three-col-grid {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
-.services .serv-content .card {
-  width: calc(33% - 20px);
-  background: var(--c-dark2);
-  text-align: center;
-  border-radius: 6px;
-  padding: 20px 25px;
-  cursor: pointer;
-  transition: all 0.3s ease;
+@media screen and (max-width:576px) {
+  .three-col-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
-.services .serv-content .card:hover {
-  background: var(--c-brand);
+/* Services */
+#services .card p {
+    margin-bottom: 0;
 }
 
-.services .serv-content .card .box {
-  transition: all 0.3s ease;
+.card {
+    transition: all 0.4s ease;
+    border-radius: var(--border-radius-lg);
+    background-color: var(--c-dark2);
 }
 
-.services .serv-content .card:hover .box {
-  transform: scale(1.05);
+.card-padding {
+    padding: 3.2rem;
 }
 
-.services .serv-content .card ion-icon {
-  font-size: 70px;
-  color: var(--c-brand);
+.card img {
+    border-top-right-radius: var(--border-radius-lg);
+    border-top-left-radius: var(--border-radius-lg);
 }
 
-.services .serv-content .card:hover ion-icon {
-  color: var(--c-light);
+.icon ion-icon{
+    width: 6.4rem;
+    height: 6.4rem;
+    font-size: 3.2rem;
+    border-radius: var(--border-radius);
+    background-color: var(--c-brand);
+    color: var(--c-dark2);
+    text-align: center;
+    display: grid;
+    align-content: center;
+    margin-bottom: 1.8rem;
 }
 
-.services .serv-content .card .text {
-  font-size: 25px;
-  font-weight: 500;
-  margin: 10px 0 7px 0;
+.card:hover {
+    box-shadow: 0 0 0 0.3rem var(--c-brand);
+    transform: translateY(-0.5rem);
 }
 
-/*===========  /SESSÃO CONHECIMENTOS  ===========*/
+/*=====  /SESSÃO CONHECIMENTOS  =====*/
 
 
 
 /*=====  SESSÃO PROJETOS  =====*/
-
-.skills .title::after {
-  content: "Acompanhe";
-}
 
 .skills .skills-content .column {
   width: calc(50% - 30px);
@@ -461,6 +510,123 @@ section .title::after {
 }
 
 /*===========  /SESSÃO PROJETOS  ===========*/
+
+
+
+/*===== Novo projetos =====*/
+
+#projects {
+	padding: 10rem 0;
+}
+#projects .item {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 800px;
+	margin: 0 auto;
+	margin-bottom: 15rem;
+	/* gap: 2rem; */
+}
+#projects .item:nth-of-type(even) {
+	flex-direction: row-reverse;
+}
+#projects .item .left {
+	flex: 1;
+}
+#projects .item .right {
+	margin-left: -150px;
+	flex: 1;
+	background-color: var(--body-bg);
+	padding: 5rem 3rem;
+	border-radius: 12px;
+	box-shadow: 0px 0px 20px #00000028;
+	z-index: 2;
+}
+#projects .item:nth-of-type(even) .right {
+	margin-left: 0;
+}
+#projects .item:nth-of-type(even) .left {
+	margin-left: -150px;
+}
+#projects .item .left .img {
+	height: 500px;
+	overflow: hidden;
+	border-radius: 12px;
+	overflow: hidden;
+	box-shadow: 0px 0px 20px #4705fc33;
+	position: relative;
+}
+#projects .item .left .img::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-color: #5a24ed38;
+}
+#projects .item .left .img img {
+	object-fit: cover;
+	transition: 0.3s ease transform;
+}
+#projects .item:hover .left .img img {
+	transform: scale(1.1);
+	z-index: 1;
+}
+#projects .item .right .project-title {
+	font-size: 2.5rem;
+	font-family: 'Montserrat';
+	margin-bottom: 1rem;
+}
+#projects .item .right .project-sub-title {
+	font-size: 1.6rem;
+	margin-bottom: 2rem;
+}
+#projects .item .right .project-desc {
+	color: var(--secondary-gray);
+	margin-bottom: 3rem;
+}
+#projects .item .right .external-link {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+	padding: calc(0.6em - 4px) calc(1.6em - 4px);
+}
+#projects .item .right .external-link svg {
+	width: 25px;
+}
+
+@media only screen and (max-width: 768px) {
+	#projects .item {
+		flex-direction: column;
+	}
+	#projects .item .left {
+		width: 100%;
+	}
+	#projects .item .right {
+		margin-left: 0;
+		width: 90%;
+		margin-top: -150px;
+	}
+	#projects .item:nth-of-type(even) {
+		flex-direction: column;
+	}
+	#projects .item:nth-of-type(even) .left {
+		margin-left: 0;
+	}
+}
+@media only screen and (max-width: 450px) {
+	#projects .item .right .buttons {
+		flex-direction: column;
+	}
+	#projects .item .right .buttons a {
+		width: 100%;
+		text-align: center;
+	}
+}
+
+/*===== Novo projeto =====*/
 
 
 
@@ -569,42 +735,29 @@ section .title::after {
 
 /*===== SESSÃO CONTATO =====*/
 
+.contact-bg {
+  background-color: var(--c-brand);
+  height: 70vh;
+  padding: 50px;
+}
 
+form input, textarea {
+  color: var(--textColor) !important;
+  background-color: var(--c-dark) !important;
+  border: 3px solid var(--gray) !important;
+}
+
+.form-control::placeholder {
+  color: rgba(231, 230, 230, 0.4);
+}
+
+@media screen and (max-width:974px) {
+  .contact-bg{
+      height: 40vh;
+  }
+}
 
 /*=========== /SESSÃO CONTATO ===========*/
-
-
-
-/*===== BOTÃO DE VOLTAR =====*/
-
-#backToTopButton {
-  position: fixed;
-  bottom: 1.5rem;
-  right: 2.5rem;
-
-  opacity: 0;
-  visibility: hidden;
-
-  transition: 200ms;
-  transform: translateY(100%);
-}
-
-#backToTopButton.show {
-  opacity: 1;
-  visibility: visible;
-
-  transform: translateY(0);
-}
-
-/*=========== /BOTÃO DE VOLTAR ===========*/
-
-
-
-/*===== FOOTER =====*/
-
-
-
-/*=========== /FOOTER ===========*/
 
 
 
@@ -731,3 +884,4 @@ section .title::after {
 }
 
 /*=========== /SCROLLBAR ===========*/
+
