@@ -1,7 +1,10 @@
-@charset "UTF-8";
 /* Font */
-@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&display=swap');
+
+
+
 /*=====  GERAL  =====*/
+
 * {
   margin: 0;
   padding: 0;
@@ -20,6 +23,9 @@ html {
 }
 
 /*===========  /GERAL  ===========*/
+
+
+
 /*=====  VARIABLES COLORS  =====*/
 :root {
   --c-brand: #135F00;
@@ -33,7 +39,11 @@ html {
 }
 
 /*===========  /VARIABLES COLORS  ===========*/
+
+
+
 /*=====   NAVBAR DE INÍCIO  =====*/
+
 .navbar {
   position: fixed;
   width: 100%;
@@ -91,7 +101,11 @@ html {
 }
 
 /*===========  /NAVBAR DE INÍCIO  ===========*/
+
+
+
 /*=====  HOME DO INÍCIO  =====*/
+
 .home {
   display: flex;
   background: url(../img/Icons/logo-fab.png) no-repeat;
@@ -143,7 +157,11 @@ html {
 }
 
 /*===========  /HOME DO INÍCIO  ===========*/
+
+
+
 /*=====  MENU MOBILE  =====*/
+
 .menu-btn {
   color: var(--c-light);
   font-size: 26px;
@@ -177,7 +195,11 @@ html {
 }
 
 /*===========  /MENU MOBILE  ===========*/
+
+
+
 /*=====  AJUSTE TOTAL NO CÓDIGO  =====*/
+
 section {
   padding: 100px 0;
 }
@@ -229,7 +251,11 @@ section .title::after {
 }
 
 /*===========  /AJUSTE TOTAL NO CÓDIGO  ===========*/
+
+
+
 /*=====  SESSÃO SOBRE  =====*/
+
 .about .title::after {
   content: "Informações";
 }
@@ -283,7 +309,11 @@ section .title::after {
 }
 
 /*===========  /SESSÃO SOBRE  ===========*/
+
+
+
 /*=====  SESSÃO CONHECIMENTOS  =====*/
+
 .services, .teams {
   background: var(--c-dark);
   color: var(--c-light);
@@ -338,7 +368,11 @@ section .title::after {
 }
 
 /*===========  /SESSÃO CONHECIMENTOS  ===========*/
+
+
+
 /*=====  SESSÃO PROJETOS  =====*/
+
 .skills .title::after {
   content: "Acompanhe";
 }
@@ -427,7 +461,11 @@ section .title::after {
 }
 
 /*===========  /SESSÃO PROJETOS  ===========*/
+
+
+
 /*===== SESSÃO EQUIPE =====*/
+
 .teams .title::after {
   content: "Especializada";
 }
@@ -440,7 +478,10 @@ section .title::after {
   transition: all 0.3s ease;
 }
 
+
+
 /*============= Social Links =============*/
+
 .teams .links a {
   display: inline-block;
   color: var(--c-light);
@@ -459,6 +500,9 @@ section .title::after {
 }
 
 /*============= /Social Links =============*/
+
+
+
 .teams .carousel .card:hover {
   background: var(--c-brand);
 }
@@ -520,15 +564,27 @@ section .title::after {
 }
 
 /*=========== /SESSÃO EQUIPE ===========*/
+
+
+
 /*===== SESSÃO CONTATO =====*/
+
+
+
 /*=========== /SESSÃO CONTATO ===========*/
+
+
+
 /*===== BOTÃO DE VOLTAR =====*/
+
 #backToTopButton {
   position: fixed;
   bottom: 1.5rem;
   right: 2.5rem;
+
   opacity: 0;
   visibility: hidden;
+
   transition: 200ms;
   transform: translateY(100%);
 }
@@ -536,52 +592,24 @@ section .title::after {
 #backToTopButton.show {
   opacity: 1;
   visibility: visible;
+
   transform: translateY(0);
 }
 
 /*=========== /BOTÃO DE VOLTAR ===========*/
+
+
+
 /*===== FOOTER =====*/
-footer {
-  background-color: var(--c-footer);
-  padding-top: 80px;
-}
 
-footer h4 {
-  color: white;
-  margin-bottom: 24px;
-}
 
-footer p,
-footer li,
-footer li a {
-  color: rgba(255, 255, 255, 0.7);
-}
-
-footer ul {
-  list-style: none;
-  padding: 0;
-}
-
-footer ul li {
-  margin-top: 6px;
-}
-
-.footer-top {
-  padding-bottom: 40px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.footer-bottom {
-  padding-top: 40px;
-  padding-bottom: 40px;
-}
-
-.footer-bottom a {
-  color: var(--c-brand);
-}
 
 /*=========== /FOOTER ===========*/
+
+
+
 /*=====  RESPONSIVO  =====*/
+
 @media (max-width: 1300px) {
   .navbar .max-width {
     margin-left: 0;
@@ -655,7 +683,7 @@ footer ul li {
     margin-bottom: 20px;
   }
   .skills .skills-content .column,
-  .contact .contact-content .column {
+.contact .contact-content .column {
     width: 100%;
     margin-bottom: 35px;
   }
@@ -685,11 +713,16 @@ footer ul li {
     font-size: 27px;
   }
 }
+
 /*===========  /RESPONSIVO  ===========*/
+
+
+
 /*===== SCROLLBAR =====*/
+
 ::-webkit-scrollbar {
   width: 8px;
-  border: 8px;
+  border:8px;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -697,4 +730,4 @@ footer ul li {
   border-radius: 15px;
 }
 
-/*=========== /SCROLLBAR ===========*//*# sourceMappingURL=style.css.map */
+/*=========== /SCROLLBAR ===========*/
