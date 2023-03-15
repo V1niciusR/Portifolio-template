@@ -3,6 +3,47 @@
 
 
 
+/*=====  VARIABLES COLORS  =====*/
+:root {
+  --c-brand: #135F00;
+  --c-brand2: #000000;
+  --c-dark: #111;
+  --c-dark2: #222;
+  --c-dark3: #333;
+  --gray: rgba(42, 53, 62, 0.4);
+  --textColor: #F2FAFF;
+  --c-textContact: #fff;
+  --c-light: #fff;
+  --c-light2: #ccc;
+  --c-colorbtn: #F2FAFF;
+
+  --sidebar-hsl: 210, 44%, 15%;
+  
+  --transition: all .4s cubic-bezier(.165, .84, .44, 1);
+  --border-radius-lg: 2.4rem;
+  --border-radius: 1.2rem;
+  --shadow: 0px 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.light-mode {
+  --c-brand: #135F00;
+  --c-brand2: #ffffff;
+  --c-dark: #ccc;
+  --c-dark2: #dadada;
+  --c-dark3: #bdbdbd;
+  --gray: rgba(42, 53, 62, 0.4);
+  --textColor: #000000;
+  --c-textContact: #111;
+  --c-light: #080808;
+  --c-light2: #111111;
+}
+
+/*===========  /VARIABLES COLORS  ===========*/
+
+
+
 /*=====  GERAL  =====*/
 
 *{
@@ -34,44 +75,6 @@ body{
 }
 
 /*===========  /GERAL  ===========*/
-
-
-
-/*=====  VARIABLES COLORS  =====*/
-:root {
-  --c-brand: #135F00;
-  --c-brand2: #000000;
-  --c-dark: #111;
-  --c-dark2: #222;
-  --c-dark3: #333;
-  --gray: rgba(42, 53, 62, 0.4);
-  --textColor: #F2FAFF;
-  --c-light: #fff;
-  --c-light2: #ccc;
-
-  --sidebar-hsl: 210, 44%, 15%;
-  
-  --transition: all .4s cubic-bezier(.165, .84, .44, 1);
-  --border-radius-lg: 2.4rem;
-  --border-radius: 1.2rem;
-  --shadow: 0px 15px 40px rgba(0, 0, 0, 0.1);
-}
-
-
-
-.light-mode {
-  --c--brand: #FEFBF6;
-  --c-brand2: #A6D1E6;
-  --c-dark: #454e56;
-  --c-dark2: #000;
-  --c-dark3: #f8f8f8;
-  --gray: #6c7983;
-  --textColor: #6c7983;
-  --c-light: #6c7983;
-  --c-light2: #454e56;
-}
-
-/*===========  /VARIABLES COLORS  ===========*/
 
 
 
@@ -151,7 +154,7 @@ section {
   width: 36px;
   height: 36px;
   background-color: var(--c-brand);
-  color: var(--textColor);
+  color: var(--c-colorbtn);
   border: 2px solid var(--c-brand);
   border-radius: 25px;
   display: inline-flex;
@@ -198,7 +201,7 @@ section {
 #hero a{
   display: inline-flex;
   background: var(--c-brand);
-  color: var(--c-light);
+  color: var(--c-colorbtn);
   font-size: 15px;
   padding: 6px 16px;
   margin-top: 20px;
@@ -300,7 +303,7 @@ section .title::after {
 .about .about-content .right a {
   display: inline-block;
   background: var(--c-brand);
-  color: var(--c-light);
+  color: var(--c-colorbtn);
   font-size: 20px;
   font-weight: 500;
   padding: 10px 30px;
@@ -426,7 +429,7 @@ section .title::after {
 .skills .skills-content .left a {
   display: inline-block;
   background: var(--c-brand);
-  color: var(--c-light);
+  color: var(--c-colorbtn);
   font-size: 18px;
   font-weight: 500;
   padding: 8px 16px;
@@ -520,7 +523,7 @@ section .title::after {
   height: 100%;
   width: 100%;
   opacity: 0;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: var(--c-dark2);
   color: var(--c-light);
   text-align: center;
   padding: 20px;
@@ -661,7 +664,7 @@ form input, textarea {
 }
 
 .form-control::placeholder {
-  color: rgba(231, 230, 230, 0.4);
+  color: var(--c-textContact);
 }
 
 @media screen and (max-width:974px) {
@@ -810,7 +813,7 @@ form input, textarea {
   bottom: 30px;
   text-align: center;
   line-height: 50px;
-  color: var(--c-light);
+  color: var(--c-colorbtn);
   background: var(--c-brand);
   border-radius: 6px;
   font-size: 30px;
@@ -841,7 +844,7 @@ form input, textarea {
   bottom: 30px;
   text-align: center;
   line-height: 50px;
-  color: var(--c-light);
+  color: var(--c-colorbtn);
   background: var(--c-brand);
   border-radius: 6px;
   font-size: 30px;
