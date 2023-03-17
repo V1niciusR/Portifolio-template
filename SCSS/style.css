@@ -592,6 +592,57 @@ section .title::after {
   transition: all 0.3s ease;
 }
 
+.card {
+  margin-bottom: 30px;
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+  height: 300px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 30px 20px;
+}
+
+.card-title {
+  color: #3a3a3a;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.card-text {
+  color: #777777;
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.list-unstyled {
+  display: flex;
+  justify-content: center;
+}
+
+.list-unstyled li {
+  margin-right: 10px;
+}
+
+.list-unstyled li a {
+  color: #777777;
+  font-size: 24px;
+}
+
+.list-unstyled li a:hover {
+  color: #3a3a3a;
+}
+
+/*=====*/
+
 
 
 /*============= Social Links =============*/
