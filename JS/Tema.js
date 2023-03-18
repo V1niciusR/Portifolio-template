@@ -16,3 +16,6 @@ themeToggle.addEventListener('click', function() {
     icon.setAttribute('name', 'sunny-outline');
   }
 });
+
+
+
