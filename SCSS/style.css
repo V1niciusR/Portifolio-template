@@ -18,7 +18,7 @@
   --c-colorbtn: #F2FAFF;
 
   --sidebar-hsl: 210, 44%, 15%;
-  
+
   --transition: all .4s cubic-bezier(.165, .84, .44, 1);
   --border-radius-lg: 2.4rem;
   --border-radius: 1.2rem;
@@ -46,7 +46,7 @@
 
 /*=====  GERAL  =====*/
 
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -59,7 +59,7 @@ html {
   scroll-behavior: smooth;
 }
 
-body{
+body {
   font-family: 'Open Sans', sans-serif;
   overflow-x: hidden;
   scroll-behavior: smooth;
@@ -129,8 +129,8 @@ section {
 
 @media (min-width: 992px) {
   .navbar-expand-lg .navbar-nav .nav-link {
-      padding-right: 16px;
-      padding-left: 16px;
+    padding-right: 16px;
+    padding-left: 16px;
   }
 }
 
@@ -140,7 +140,7 @@ section {
 }
 
 .navbar .navbar-nav .nav-link:hover,
-.navbar .navbar-nav .nav-link.active  {
+.navbar .navbar-nav .nav-link.active {
   color: var(--c-brand);
 }
 
@@ -150,7 +150,7 @@ section {
   color: var(--textColor);
 }
 
-.social-icon  {
+.social-icon {
   width: 36px;
   height: 36px;
   background-color: var(--c-brand);
@@ -188,7 +188,9 @@ section {
 /*===== HOME DE INÍCIO =====*/
 
 #hero {
-  background: /*linear-gradient(hsla(var(--sidebar-hsl), 0.9), hsla(var(--sidebar-hsl), 0.9)),*/ url(../img/background/img_3.jpg);
+  background:
+    /*linear-gradient(hsla(var(--sidebar-hsl), 0.9), hsla(var(--sidebar-hsl), 0.9)),*/
+    url(../img/background/img_3.jpg);
   background-position: center;
   background-size: cover;
 }
@@ -198,133 +200,22 @@ section {
   transition: all 0.3s ease;
 }
 
-.main {
+#hero a {
   display: inline-flex;
+  background: var(--c-brand);
+  color: var(--c-colorbtn);
+  font-size: 15px;
+  padding: 6px 16px;
+  margin-top: 20px;
+  border-radius: 25px;
+  border: 2px solid var(--c-brand);
   flex-direction: column;
   gap: 0.5em;
-
-  
-  align-items: center;
-  margin-right: 6px;
 }
 
-.up {
-  display: flex;
-  flex-direction: row;
-  gap: 0.5em;
-}
-
-.down {
-  display: flex;
-  flex-direction: row;
-  gap: 0.5em;
-}
-
-.card1 {
-  width: 90px;
-  height: 90px;
-  outline: none;
-  border: none;
-  background: transparent;
-  border-radius: 90px 5px 5px 5px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-  transition: .2s ease-in-out;
-}
-
-.instagram {
-  margin-top: 1.5em;
-  margin-left: 1.2em;
-  fill: #cc39a4;
-}
-
-.card2 {
-  width: 90px;
-  height: 90px;
-  outline: none;
-  border: none;
-  background: transparent;
-  border-radius: 5px 90px 5px 5px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-  transition: .2s ease-in-out;
-}
-
-.twitter {
-  margin-top: 1.5em;
-  margin-left: -.9em;
-  fill: #03A9F4;
-}
-
-.card3 {
-  width: 90px;
-  height: 90px;
-  outline: none;
-  border: none;
-  background: transparent;
-  border-radius: 5px 5px 5px 90px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-  transition: .2s ease-in-out;
-}
-
-.github {
-  margin-top: -.6em;
-  margin-left: 1.2em;
-}
-
-.card4 {
-  width: 90px;
-  height: 90px;
-  outline: none;
-  border: none;
-  background: transparent;
-  border-radius: 5px 5px 90px 5px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-  transition: .2s ease-in-out;
-}
-
-.discord {
-  margin-top: -.9em;
-  margin-left: -1.2em;
-  fill: #8c9eff;
-}
-
-.card1:hover {
-  cursor: pointer;
-  scale: 1.1;
-  background-color: #cc39a4;
-}
-
-.card1:hover .instagram {
-  fill: white;
-}
-
-.card2:hover {
-  cursor: pointer;
-  scale: 1.1;
-  background-color: #03A9F4;
-}
-
-.card2:hover .twitter {
-  fill: white;
-}
-
-.card3:hover {
-  cursor: pointer;
-  scale: 1.1;
-  background-color: black;
-}
-
-.card3:hover .github {
-  fill: white;
-}
-
-.card4:hover {
-  cursor: pointer;
-  scale: 1.1;
-  background-color: #8c9eff;
-}
-
-.card4:hover .discord {
-  fill: white;
+#hero a:hover {
+  color: var(--c-brand);
+  background: none;
 }
 
 /*===== /HOME DE INÍCIO =====*/
@@ -369,7 +260,12 @@ section .title::after {
   transform: translateX(-50%);
 }
 
-.about, .services, .skills, .teams, .contact, footer {
+.about,
+.services,
+.skills,
+.teams,
+.contact,
+footer {
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -458,7 +354,7 @@ section .title::after {
 
 /*=====  SESSÃO CONHECIMENTOS  =====*/
 
-.grid{
+.grid {
   display: grid;
   gap: 2.4rem;
 }
@@ -483,40 +379,40 @@ section .title::after {
 
 /* Services */
 #services .card p {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .card {
-    transition: all 0.4s ease;
-    border-radius: var(--border-radius-lg);
-    background-color: var(--c-dark2);
+  transition: all 0.4s ease;
+  border-radius: var(--border-radius-lg);
+  background-color: var(--c-dark2);
 }
 
 .card-padding {
-    padding: 3.2rem;
+  padding: 3.2rem;
 }
 
 .card img {
-    border-top-right-radius: var(--border-radius-lg);
-    border-top-left-radius: var(--border-radius-lg);
+  border-top-right-radius: var(--border-radius-lg);
+  border-top-left-radius: var(--border-radius-lg);
 }
 
-.icon ion-icon{
-    width: 6.4rem;
-    height: 6.4rem;
-    font-size: 3.2rem;
-    border-radius: var(--border-radius);
-    background-color: var(--c-brand);
-    color: var(--c-dark2);
-    text-align: center;
-    display: grid;
-    align-content: center;
-    margin-bottom: 1.8rem;
+.icon ion-icon {
+  width: 6.4rem;
+  height: 6.4rem;
+  font-size: 3.2rem;
+  border-radius: var(--border-radius);
+  background-color: var(--c-brand);
+  color: var(--c-dark2);
+  text-align: center;
+  display: grid;
+  align-content: center;
+  margin-bottom: 1.8rem;
 }
 
 .card:hover {
-    box-shadow: 0 0 0 0.3rem var(--c-brand);
-    transform: translateY(-0.5rem);
+  box-shadow: 0 0 0 0.3rem var(--c-brand);
+  transform: translateY(-0.5rem);
 }
 
 /*=====  /SESSÃO CONHECIMENTOS  =====*/
@@ -857,7 +753,8 @@ section .title::after {
   padding: 50px;
 }
 
-form input, textarea {
+form input,
+textarea {
   color: var(--textColor) !important;
   background-color: var(--c-dark) !important;
   border: 3px solid var(--gray) !important;
@@ -868,8 +765,8 @@ form input, textarea {
 }
 
 @media screen and (max-width:974px) {
-  .contact-bg{
-      height: 40vh;
+  .contact-bg {
+    height: 40vh;
   }
 }
 
@@ -945,26 +842,31 @@ form input, textarea {
     margin-left: 0;
   }
 }
+
 @media (max-width: 1104px) {
   .about .about-content .left img {
     width: 350px;
     height: 350px;
   }
 }
+
 @media (max-width: 991px) {
   .navbar .max-width {
     padding: 0 50px;
   }
 }
+
 @media (max-width: 947px) {
   .max-width {
     max-width: 800px;
     padding: 0 50px;
   }
+
   .menu-btn {
     display: block;
     z-index: 999;
   }
+
   .navbar .menu {
     position: fixed;
     width: 100%;
@@ -976,69 +878,87 @@ form input, textarea {
     text-align: center;
     transition: all 0.3s ease;
   }
+
   .navbar .menu.active {
     left: 0;
   }
+
   .navbar .menu li {
     display: block;
   }
+
   .navbar .menu li a {
     display: inline-block;
     margin: 20px 0;
     font-size: 25px;
   }
+
   .home .home-content .text-2 {
     font-size: 70px;
   }
+
   .home .home-content .text-3 {
     font-size: 35px;
   }
+
   .home .home-content a {
     font-size: 23px;
     padding: 10px 30px;
   }
+
   .about .about-content .column {
     width: 50%;
   }
+
   .about .about-content .left {
     display: flex;
     justify-content: center;
     margin: 0 auto 60px;
   }
+
   .about .about-content .right {
     flex: 100%;
   }
+
   .services .serv-content .card {
     width: calc(50% - 10px);
     margin-bottom: 20px;
   }
+
   .skills .skills-content .column,
-.contact .contact-content .column {
+  .contact .contact-content .column {
     width: 100%;
     margin-bottom: 35px;
   }
+
   footer {
     margin-top: 15px;
   }
 }
+
 @media (max-width: 690px) {
   .home .home-content .text-2 {
     font-size: 60px;
   }
+
   .home .home-content .text-3 {
     font-size: 32px;
   }
+
   .home .home-content a {
     font-size: 20px;
   }
+
   .services .serv-content .card {
     width: 100%;
   }
 }
+
 @media (max-width: 500px) {
   .home .home-content .text-2 {
     font-size: 50px;
   }
+
   .home .home-content .text-3 {
     font-size: 27px;
   }
@@ -1052,7 +972,7 @@ form input, textarea {
 
 ::-webkit-scrollbar {
   width: 8px;
-  border:8px;
+  border: 8px;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -1131,4 +1051,3 @@ form input, textarea {
 
 
 /*=========== /LOADER ===========*/
-
