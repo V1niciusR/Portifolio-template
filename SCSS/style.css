@@ -867,6 +867,18 @@ form input, textarea {
   color: var(--c-textContact);
 }
 
+@media screen and (max-width:974px) {
+  .contact-bg{
+      height: 40vh;
+  }
+}
+
+/*=========== /SESSÃO CONTATO ===========*/
+
+
+
+/*===== TODOS OS BOTÕES =====*/
+
 .cssbuttons-io {
   position: relative;
   font-family: inherit;
@@ -922,14 +934,7 @@ form input, textarea {
   transform: scale(0.95);
 }
 
-
-@media screen and (max-width:974px) {
-  .contact-bg{
-      height: 40vh;
-  }
-}
-
-/*=========== /SESSÃO CONTATO ===========*/
+/*===== TODOS OS BOTÕES =====*/
 
 
 
