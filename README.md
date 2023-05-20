@@ -8,5 +8,4 @@ Um portifolio template feito com HTML, CSS e JavaScript.
 
 ## Demo
 
-![vCard Desktop Demo](./website-demo-image/desktop.png "Desktop Demo")
-![vCard Mobile Demo](./website-demo-image/mobile.png "Mobile Demo")
+![Portifolio template demo](./Demo-site/Design.png "site Demo")
